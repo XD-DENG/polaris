@@ -35,9 +35,8 @@ keywords = [
 dependencies = [
     "urllib3>=1.25.3,<3.0.0",
     "python-dateutil>=2.8.2",
-    "pydantic>=2.14.0,<2.15.0",
+    "pydantic>=2.11.0,<3",
     "typing-extensions>=4.7.1",
-    "boto3~=1.43.1",
     "PyYAML>=6.0.3",
     "prettytable>=3.17.0",
 ]
@@ -60,6 +59,8 @@ dev = [
     "pre-commit==4.7.0",
     "openapi-generator-cli==7.26.0",
     "pip-licenses-cli==4.1.0",
+    # Used by the regression tests (regtests/t_pyspark), not by the client.
+    "boto3~=1.43.1",
 ]
 
 [tool.hatch.build.targets.sdist]

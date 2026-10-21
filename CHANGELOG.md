@@ -111,6 +111,9 @@ request adding CHANGELOG notes for breaking (!) changes and possibly other secti
   accounts for them. Entities with many grants weigh more, which can lead to more evictions than before
   with the same configured value. The description of `ENTITY_CACHE_WEIGHER_TARGET` now documents that
   its weights approximate bytes.
+- Python client: `boto3` is no longer a runtime dependency (the client never imported it), and
+  `pydantic` is now accepted from 2.11 up to, but excluding, 3.0 instead of a single minor version.
+  This lets the client be installed alongside other packages that pin those libraries.
 
 ### Deprecations
 
